@@ -21,5 +21,5 @@ To run the tests, follow these steps:
 4. Run the tests using: npx playwright test or npx playwright test --ui (UI mode) 
 5. To open the allure report : allure open
 # Additonally:
-Screenshots and video recordings of the test executions can be found in the `screenshots/` and `videos/` directories, respectively. These files demonstrate the application at different stages of the test execution.
+Screenshots and video recordings of the test executions can be found in the `screenshots/` and `test-results/` directories, respectively. These files demonstrate the application at different stages of the test execution.
 
