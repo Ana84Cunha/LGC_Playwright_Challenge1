@@ -19,3 +19,6 @@ To run the tests, follow these steps:
 2. Navigate to the project directory: 
 3. Install the required dependencies by running: npm install
 4. Run the tests using: npx playwright test
+# Additonally:
+Screenshots and video recordings of the test executions can be found in the `screenshots/` and `videos/` directories, respectively. These files demonstrate the application at different stages of the test execution.
+
