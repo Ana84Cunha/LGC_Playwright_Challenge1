@@ -18,7 +18,8 @@ To run the tests, follow these steps:
    git clone <repository-link>
 2. Navigate to the project directory: 
 3. Install the required dependencies by running: npm install
-4. Run the tests using: npx playwright test
+4. Run the tests using: npx playwright test or npx playwright test --ui (UI mode) 
+5. To open the allure report : allure open
 # Additonally:
 Screenshots and video recordings of the test executions can be found in the `screenshots/` and `videos/` directories, respectively. These files demonstrate the application at different stages of the test execution.
 
