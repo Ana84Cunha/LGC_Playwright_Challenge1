@@ -1,0 +1,19 @@
+{
+  "name": "lgc_playwright_exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:report": "playwright test && allure generate allure-results --clean && allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.1"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.0.2"
+  }
+}
