@@ -15,7 +15,7 @@ Automate basic functionalities of the TodoMVC application,the test focused on:
 To run the tests, follow these steps:
 1. Clone this repository to your local machine:
    ```bash
-   git clone <repository-link>
+   git clone <https://github.com/Ana84Cunha/LGC_Playwright_Challenge1.git>
 2. Navigate to the project directory: 
 3. Install the required dependencies by running: npm install
 4. Run the tests using: npx playwright test or npx playwright test --ui (UI mode) 
