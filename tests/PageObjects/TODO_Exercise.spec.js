@@ -35,7 +35,7 @@ test.only('Basic TodoMVC test', async ({ page }) => {
     await page.waitForTimeout(5000); 
     await page.screenshot({ path: 'screenshots/screenshot-3.png' });
 
-    // 6. Mark the current date TODO item as completed
+    // 6 & 7 Mark and Verify the item the current date TODO item as completed
     const currentDateTodoSelector = "li:nth-child(1) div:nth-child(1) input:nth-child(1)" // Select the checkbox for TODO 1
     await page.click(currentDateTodoSelector); // Select TODO 1 
     await page.waitForTimeout(5000);
@@ -44,18 +44,11 @@ test.only('Basic TodoMVC test', async ({ page }) => {
     await page.waitForTimeout(5000); 
     await page.screenshot({ path: 'screenshots/screenshot-4.png' });
 
-    // 7. Verify that the item is displayed as completed (e.g., struck-through text).
-    const firstTodo = page.locator("li[class='completed'] label[data-testid='todo-item-label']");
-    await expect(firstTodo).toHaveClass(/completed/);
-    await page.waitForTimeout(5000); 
-    await page.screenshot({ path: 'screenshots/screenshot-5.png' });
-
     // Step 8: Delete the second TODO item
     //a) Make them all visible
   const showAllButtonXpath = "//a[normalize-space()='All']";  
   await page.click(showAllButtonXpath); 
-  await page.waitForTimeout(5000); 
-  await page.waitForTimeout(2000); // Ensure all todos are visible
+  await page.waitForTimeout(5000); // Ensure all todos are visible
 
   // b) Select the second TODO item and hover to reveal the delete button
   const todoListItems = page.locator('.todo-list li'); // Locate all TODO items
@@ -64,10 +57,11 @@ test.only('Basic TodoMVC test', async ({ page }) => {
   // c) Click the delete button
   const deleteButton = todoListItems.nth(1).locator('.destroy'); // Select the delete button
   await deleteButton.click(); // Click on the delete button
-  await page.waitForTimeout(5000); // Wait for the deletion to process
-  await page.screenshot({ path: 'screenshots/screenshot-6.png' });
+  await page.screenshot({ path: 'screenshots/screenshot-5.png' });
 
   // 9. Verify the second item is removed from the list
   const todoList = page.locator('.todo-list');
   await expect(todoList).not.toContainText(todo2Text);
+  await page.waitForTimeout(5000);
+  await page.screenshot({ path: 'screenshots/screenshot-5.png' });
 });
