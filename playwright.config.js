@@ -27,12 +27,12 @@ module.exports = defineConfig({
   ],
   use: {
     screenshot: 'on', // Capture screenshots on test failures
-    video: 'on', // Capture video for all tests
+    video: 'on', // Capture video for all tests, even if they pass
     trace: 'on-first-retry', // Collect trace on first retry
     baseURL: 'https://todomvc.com/examples/react/#/',
-    headless: false, //  to see the browser opening
+    headless: false, // Run in headful mode to see browser execution
   },
-  /* Configure projects for major browsers */
+    /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
